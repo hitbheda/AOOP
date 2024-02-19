@@ -16,8 +16,14 @@ class NewClass{
 }
 public class Object{
     public static void main(String[] arg){
-        NewClass Obj = new NewClass();
-        Obj.stud();
-        Obj.display();
+        NewClass Obj1 = new NewClass();
+        NewClass Obj2 = new NewClass();
+        NewClass Obj3 = new NewClass();
+        Obj1.stud();
+        Obj1.display();
+        Obj2.stud();
+        Obj2.display();
+        Obj3.stud();
+        Obj3.display();
     }
 }
