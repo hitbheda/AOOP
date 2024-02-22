@@ -21,7 +21,7 @@ public class Keyw{
         int Enrollment = Obj.nextInt();
         rect r1 = new rect(Name,Enrollment);
         r1.Display();
-       react r2 = new react(Name , Enrollment);
+        rect r2 = new rect(Name , Enrollment);
        r2.Display();
     }
 }
