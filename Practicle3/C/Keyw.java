@@ -17,7 +17,7 @@ public class Keyw{
         Scanner Obj = new Scanner(System.in);
         System.out.print("Enter Name:");
         String Name = Obj.nextLine();
-        System.out.print("Enter Name:");
+        System.out.print("Enter Enrollment:");
         int Enrollment = Obj.nextInt();
         rect r1 = new rect(Name,Enrollment);
         r1.Display();
