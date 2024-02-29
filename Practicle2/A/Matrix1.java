@@ -2,9 +2,9 @@ import java.util.Scanner;
 class Matrix1 {
     public static void main(String[] args){
         Scanner newObj = new Scanner(System.in);
-         int[][] m1 =new int[3][3];
-         int[][] m2 =new int[3][3];
-         int[][] sum =new int[3][3];
+         int[][] m1 = new int[3][3];
+         int[][] m2 = new int[3][3];
+         int[][] sum = new int[3][3];
 
          System.out.println("Enter Data Of M1");
          for(int i=0;i<3;i++){
