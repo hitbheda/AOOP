@@ -14,7 +14,6 @@ class hello{
         System.out.println("Area Of Rectsngle = "+(l*w));
     }
 }
-
 public class Construct{
     public static void main(String[] args){
         Scanner Obj = new Scanner(System.in);
@@ -26,5 +25,6 @@ public class Construct{
         o1.display();
         hello o2 = new hello(l,w);
         o2.display();
+        Obj.close();
     }
 }
