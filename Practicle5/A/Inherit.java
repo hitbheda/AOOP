@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Inherit {
-    public static float w;
-    public static float h;
+    protected static float w;
+    protected static float h;
     public static void main(String[] args){
         Scanner Obj = new Scanner(System.in);
         System.out.print("Enter Width Of Ractangle :");
@@ -10,12 +10,13 @@ public class Inherit {
         System.out.print("Enter Height Of Ractangle :");
         h = Obj.nextFloat();
         Area newObj = new Area();
+        newObj.Display();
         Obj.close();
     }
 }
 
 class Area extends Inherit{
-    Area(){
+    void Display(){
         System.out.println("Area Of Ractangle = "+Inherit.h*Inherit.w);
     }
 }
