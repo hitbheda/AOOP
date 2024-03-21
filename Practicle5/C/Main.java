@@ -1,20 +1,18 @@
 import java.util.Scanner;
 
 class Staff{
-    protected int[] staffId = new int[40];
-    protected String[] staffName = new String[40];
-    protected String[] staffRole = new String[40];
+    protected static int[] staffId = new int[40];
+    protected static String[] staffName = new String[40];
+    protected static String[] staffRole = new String[40];
     protected static int staffCount;
     Scanner Obj = new Scanner(System.in);
     void getStaff(){
         System.out.print("How Many Member Are In Staff :");
         staffCount = Obj.nextInt();
+        Obj.nextLine(); 
         for(int i = 0;i < staffCount;i++){
             System.out.println("Enter Staff Id " + i +"'s Details");
             staffId[i] = i;
-            if(i == 0){
-                Obj.nextLine();
-            }
             System.out.print("Enter Staff Name :");
             staffName[i] = Obj.nextLine();
             System.out.print("Enter Staff Role :");
@@ -26,7 +24,7 @@ class Staff{
 class TeachingStaff extends Staff{
     void filterData(){
         for(int i = 0;i < staffCount; i++){
-            if(staffRole[i] == "teacher" || staffRole[i] == "Teacher"){
+            if(staffRole[i].equalsIgnoreCase("teacher")){
                 System.out.println("Printing Teaching Staff Details:");
                 System.out.println("Staff Id :"+staffId[i]);
                 System.out.println("Staff Name :"+staffName[i]);
@@ -39,7 +37,7 @@ class TeachingStaff extends Staff{
 class NonTeachingStaff extends Staff{
     void Display(){
         for(int i = 0;i < staffCount; i++){
-            if(staffRole[i] == "clerk" || staffRole[i] == "Clerk" || staffRole[i] == "Peon" || staffRole[i] == "peon"){
+            if(staffRole[i].equalsIgnoreCase("clerk") || staffRole[i].equalsIgnoreCase("peon")){
                 System.out.println("Printing None Teaching Staff Details:");
                 System.out.println("Staff Id :"+staffId[i]);
                 System.out.println("Staff Name :"+staffName[i]);
@@ -54,7 +52,7 @@ class Main {
         TeachingStaff Obj1 = new TeachingStaff();
         Obj1.getStaff();
         Obj1.filterData();
-        // NonTeachingStaff Obj2 = new NonTeachingStaff();
-        // Obj2.Display();
+        NonTeachingStaff Obj2 = new NonTeachingStaff();
+        Obj2.Display(); 
     }
 }
