@@ -22,14 +22,14 @@ class Main{
         Scanner sc = new Scanner(System.in);
         int balance=25000;
         while(balance >= 0){
-            System.out.println("\nAccount balanceance : " + balance+"\n");
-            if(balance==0){
+            System.out.println("Account balanceance : " + balance);
+            if(balance == 0){
                 break;
             }
             System.out.print("Enter Withdrawal Amount : ");
             int amount = sc.nextInt();
             try{
-                balance=divide(balance, amount);
+                balance = divide(balance, amount);
             }
             catch (Myexception me){
                 System.out.println("\n"+me);
