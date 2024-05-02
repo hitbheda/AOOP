@@ -35,5 +35,6 @@ class Main{
                 System.out.println("\n"+me);
             }
         }
-        }
+        sc.close();
+    }
 }
