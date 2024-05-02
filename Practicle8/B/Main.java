@@ -4,7 +4,6 @@ class Thread1 extends Thread{
             for(int i = 0;i <= 200; i++){
                 if(i%2 != 0){
                     System.out.println("Odd Number:"+i+" ");
-                    // System.out.println(i+" ");
                 }
                 Thread.sleep(1000);
             }
@@ -17,11 +16,9 @@ class Thread1 extends Thread{
 class Thread2 extends Thread{
     public void run(){
         try {
-            // System.out.println("Printing Even Number:");
             for(int i = 0;i <= 200; i++){
                 if(i%2 == 0){
                     System.out.println("Even Number:"+i+" ");
-                    // System.out.println(i+" ");
                 }
                 Thread.sleep(1000);
             }
