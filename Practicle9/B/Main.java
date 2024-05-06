@@ -6,7 +6,8 @@ class Main{
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter File Name :");
         String FileName = sc.nextLine();
-        try(FileOutputStream Obj = new FileOutputStream(FileName,false)){
+        try{
+            FileOutputStream Obj = new FileOutputStream(FileName,false);
             System.out.print("Enter File Content :");
             String Data = sc.nextLine();
             byte[] arr = Data.getBytes();
