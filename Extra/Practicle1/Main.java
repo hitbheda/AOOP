@@ -1,10 +1,8 @@
 public class Main {
     public static void main(String args[]) {
-        int i = 0;
-        while (args[i]) {
-            i++;
-            sum += args[i];
+        int argLen = args.length;
+        for(int i = 0; i < argLen;i++){
+          System.out.println("The Argument "+i+" = "+args[i]);
         }
-        System.out.println("Sum ="+sum);
     }
 }
